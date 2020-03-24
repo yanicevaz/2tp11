@@ -12,5 +12,7 @@ class Complex:
     def __mul__(self,complex1):
         return Complex(self.__reel*complex1.__reel,self.__imaginaire*complex1.__imaginaire)
 
-    def
+    def __truediv__(self,complex1):
+        return Complex(self.__reel/complex1.__reel,self.__imaginaire/complex1.__imaginaire)
+
 
