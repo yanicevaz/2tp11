@@ -15,4 +15,21 @@ class Complex:
     def __truediv__(self,complex1):
         return Complex(self.__reel/complex1.__reel,self.__imaginaire/complex1.__imaginaire)
 
+    def __abs__(self):
+        return Complex((self.__reel**2 + self.__imaginaire**2) ** (1/2))
 
+    def __eq__(self, complex1):
+        return Complex(self.__reel == complex1.__reel) and (self.__imaginaire == complex1.__imaginaire)
+    def __ne__(self, complex1):
+        return (self.__reel != complex1.__reel) or (self.__imaginaire != complex1.__imaginaire)
+
+if __name__ == "__main__":
+    cplx1 = Complex(1, 1)
+    cplx2 = Complex(2, 2)
+    print(cplx1 + cplx2)
+    print(cplx1 - cplx2)
+    print(cplx1 * cplx2)
+    print(cplx1 / cplx2)
+    print(abs(cplx1))
+    print(cplx1 == cplx2)
+    print(cplx1 != cplx2)
